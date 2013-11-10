@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BECFAAD182FF2C1002C5F06 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BECFAAC182FF2C1002C5F06 /* Quartz.framework */; };
+		4BECFAAF182FF2C1002C5F06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BECFAAE182FF2C1002C5F06 /* Cocoa.framework */; };
+		4BECFAB9182FF2C1002C5F06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BECFAB7182FF2C1002C5F06 /* InfoPlist.strings */; };
+		4BECFABC182FF2C1002C5F06 /* SPK_RectPackPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BECFABB182FF2C1002C5F06 /* SPK_RectPackPlugIn.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4BECFAA9182FF2C1002C5F06 /* SPK-RectPack.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SPK-RectPack.plugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BECFAAC182FF2C1002C5F06 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		4BECFAAE182FF2C1002C5F06 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4BECFAB1182FF2C1002C5F06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4BECFAB2182FF2C1002C5F06 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4BECFAB3182FF2C1002C5F06 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4BECFAB6182FF2C1002C5F06 /* SPK-RectPack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPK-RectPack-Info.plist"; sourceTree = "<group>"; };
+		4BECFAB8182FF2C1002C5F06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4BECFABA182FF2C1002C5F06 /* SPK_RectPackPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPK_RectPackPlugIn.h; sourceTree = "<group>"; };
+		4BECFABB182FF2C1002C5F06 /* SPK_RectPackPlugIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPK_RectPackPlugIn.m; sourceTree = "<group>"; };
+		4BECFABD182FF2C1002C5F06 /* SPK-RectPack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPK-RectPack-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BECFAA5182FF2C1002C5F06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BECFAAF182FF2C1002C5F06 /* Cocoa.framework in Frameworks */,
+				4BECFAAD182FF2C1002C5F06 /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BECFA9F182FF2C1002C5F06 = {
+			isa = PBXGroup;
+			children = (
+				4BECFAB4182FF2C1002C5F06 /* SPK-RectPack */,
+				4BECFAAB182FF2C1002C5F06 /* Frameworks */,
+				4BECFAAA182FF2C1002C5F06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BECFAAA182FF2C1002C5F06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BECFAA9182FF2C1002C5F06 /* SPK-RectPack.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BECFAAB182FF2C1002C5F06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BECFAAC182FF2C1002C5F06 /* Quartz.framework */,
+				4BECFAAE182FF2C1002C5F06 /* Cocoa.framework */,
+				4BECFAB0182FF2C1002C5F06 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BECFAB0182FF2C1002C5F06 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BECFAB1182FF2C1002C5F06 /* Foundation.framework */,
+				4BECFAB2182FF2C1002C5F06 /* CoreData.framework */,
+				4BECFAB3182FF2C1002C5F06 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4BECFAB4182FF2C1002C5F06 /* SPK-RectPack */ = {
+			isa = PBXGroup;
+			children = (
+				4BECFABA182FF2C1002C5F06 /* SPK_RectPackPlugIn.h */,
+				4BECFABB182FF2C1002C5F06 /* SPK_RectPackPlugIn.m */,
+				4BECFAB5182FF2C1002C5F06 /* Supporting Files */,
+			);
+			path = "SPK-RectPack";
+			sourceTree = "<group>";
+		};
+		4BECFAB5182FF2C1002C5F06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BECFAB6182FF2C1002C5F06 /* SPK-RectPack-Info.plist */,
+				4BECFAB7182FF2C1002C5F06 /* InfoPlist.strings */,
+				4BECFABD182FF2C1002C5F06 /* SPK-RectPack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BECFAA8182FF2C1002C5F06 /* SPK-RectPack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BECFAC0182FF2C1002C5F06 /* Build configuration list for PBXNativeTarget "SPK-RectPack" */;
+			buildPhases = (
+				4BECFAA4182FF2C1002C5F06 /* Sources */,
+				4BECFAA5182FF2C1002C5F06 /* Frameworks */,
+				4BECFAA6182FF2C1002C5F06 /* Resources */,
+				4BECFAA7182FF2C1002C5F06 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SPK-RectPack";
+			productName = "SPK-RectPack";
+			productReference = 4BECFAA9182FF2C1002C5F06 /* SPK-RectPack.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BECFAA0182FF2C1002C5F06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "*spark live";
+			};
+			buildConfigurationList = 4BECFAA3182FF2C1002C5F06 /* Build configuration list for PBXProject "SPK-RectPack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4BECFA9F182FF2C1002C5F06;
+			productRefGroup = 4BECFAAA182FF2C1002C5F06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BECFAA8182FF2C1002C5F06 /* SPK-RectPack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BECFAA6182FF2C1002C5F06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BECFAB9182FF2C1002C5F06 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BECFAA7182FF2C1002C5F06 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies the built plug-in to \"~/Library/Graphics/Quartz Composer Plug-Ins\" and overrides any previous version at that location\n\nmkdir -p \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins\"\nrm -rf \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/SPK-RectPack.plugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/SPK-RectPack.plugin\" \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BECFAA4182FF2C1002C5F06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BECFABC182FF2C1002C5F06 /* SPK_RectPackPlugIn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4BECFAB7182FF2C1002C5F06 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BECFAB8182FF2C1002C5F06 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BECFABE182FF2C1002C5F06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4BECFABF182FF2C1002C5F06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4BECFAC1182FF2C1002C5F06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SPK-RectPack/SPK-RectPack-Prefix.pch";
+				INFOPLIST_FILE = "SPK-RectPack/SPK-RectPack-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		4BECFAC2182FF2C1002C5F06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SPK-RectPack/SPK-RectPack-Prefix.pch";
+				INFOPLIST_FILE = "SPK-RectPack/SPK-RectPack-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BECFAA3182FF2C1002C5F06 /* Build configuration list for PBXProject "SPK-RectPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BECFABE182FF2C1002C5F06 /* Debug */,
+				4BECFABF182FF2C1002C5F06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BECFAC0182FF2C1002C5F06 /* Build configuration list for PBXNativeTarget "SPK-RectPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BECFAC1182FF2C1002C5F06 /* Debug */,
+				4BECFAC2182FF2C1002C5F06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BECFAA0182FF2C1002C5F06 /* Project object */;
+}
