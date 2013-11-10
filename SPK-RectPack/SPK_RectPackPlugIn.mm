@@ -10,6 +10,7 @@
 #import <OpenGL/CGLMacro.h>
 
 #import "SPK_RectPackPlugIn.h"
+#import "MaxRectsBinPack.h"
 
 #define	kQCPlugIn_Name				@"SPK-RectPack"
 #define	kQCPlugIn_Description		@"SPK-RectPack description"
@@ -28,6 +29,15 @@
 + (NSDictionary *)attributesForPropertyPortWithKey:(NSString *)key
 {
 	// Specify the optional attributes for property based ports (QCPortAttributeNameKey, QCPortAttributeDefaultValueKey...).
+
+    if ([key isEqual:@"inputWidth"])            return @{ QCPortAttributeNameKey : @"Pixel Width" };
+    if ([key isEqual:@"inputHeight"])           return @{ QCPortAttributeNameKey : @"Pixel Height" };
+    if ([key isEqual:@"inputRects"])            return @{ QCPortAttributeNameKey : @"Rects Structure" };
+    if ([key isEqual:@"inputPackHeuristic"])    return @{ QCPortAttributeNameKey : @"Packing Fit" };
+        //return @{ QCPortAttributeNameKey : @"Packing Fit", QCPortAttributeMenuItemsKey : @[@"Best short side fit", @"Best long side fit", @"Best area fit", @"Bottom left rule", @"Contact point rule"]};
+    if ([key isEqual:@"inputPackCanRotate"])    return @{ QCPortAttributeNameKey : @"Packing Rotate" };
+    if ([key isEqual:@"outputRects"])           return @{ QCPortAttributeNameKey : @"Rects Structure" };
+    
 	return nil;
 }
 
@@ -82,6 +92,48 @@
 	CGLContextObj cgl_ctx = [context CGLContextObj];
 	*/
 	
+    int width = [[self valueForInputKey:@"inputWidth"] intValue];
+    int height = [[self valueForInputKey:@"inputHeight"] intValue];
+
+    NSMutableDictionary* rectStruct = [[self valueForInputKey:@"inputRects"] mutableCopy];
+
+    rbp::MaxRectsBinPack::FreeRectChoiceHeuristic fit = rbp::MaxRectsBinPack::RectBestShortSideFit;
+    switch ([[self valueForInputKey:@"inputPackHeuristic"] intValue]) {
+        case 0: fit = rbp::MaxRectsBinPack::RectBestShortSideFit; break;
+        case 1: fit = rbp::MaxRectsBinPack::RectBestLongSideFit; break;
+        case 2: fit = rbp::MaxRectsBinPack::RectBestAreaFit; break;
+        case 3: fit = rbp::MaxRectsBinPack::RectBottomLeftRule; break;
+        case 4: fit = rbp::MaxRectsBinPack::RectContactPointRule; break;
+    }
+    
+    bool canRotate = [[self valueForInputKey:@"inputPackCanRotate"] boolValue];
+    
+    rbp::MaxRectsBinPack pack(width, height, canRotate);
+    
+    NSArray* keys = [rectStruct allKeys];
+    for (NSString* key in keys)
+    {
+        NSMutableDictionary* rectDict = [[rectStruct objectForKey:key] mutableCopy];
+        
+        rbp::Rect rectOut = pack.Insert([rectDict[@"width"] intValue], [rectDict[@"height"] intValue], rbp::MaxRectsBinPack::RectBestShortSideFit);
+        
+        rectDict[@"x"] = @(rectOut.x);
+        rectDict[@"y"] = @(rectOut.y);
+        
+        BOOL rotated = [[rectDict objectForKey:@"width"] intValue] != rectOut.width;
+        
+        if (rotated)
+        {
+            rectDict[@"width"] = @(rectOut.width);
+            rectDict[@"height"] = @(rectOut.height);
+            rectDict[@"rotated"] = @YES;
+        }
+        
+        [rectStruct setObject:rectDict forKey:key];
+    }
+    
+    [self setValue:rectStruct forOutputKey:@"outputRects"];
+    
 	return YES;
 }
 

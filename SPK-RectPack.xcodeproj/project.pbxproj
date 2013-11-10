@@ -10,7 +10,9 @@
 		4BECFAAD182FF2C1002C5F06 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BECFAAC182FF2C1002C5F06 /* Quartz.framework */; };
 		4BECFAAF182FF2C1002C5F06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BECFAAE182FF2C1002C5F06 /* Cocoa.framework */; };
 		4BECFAB9182FF2C1002C5F06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BECFAB7182FF2C1002C5F06 /* InfoPlist.strings */; };
-		4BECFABC182FF2C1002C5F06 /* SPK_RectPackPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BECFABB182FF2C1002C5F06 /* SPK_RectPackPlugIn.m */; };
+		4BECFABC182FF2C1002C5F06 /* SPK_RectPackPlugIn.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4BECFABB182FF2C1002C5F06 /* SPK_RectPackPlugIn.mm */; };
+		4BECFAC7182FF4F8002C5F06 /* MaxRectsBinPack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BECFAC3182FF4F8002C5F06 /* MaxRectsBinPack.cpp */; };
+		4BECFAC8182FF4F8002C5F06 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4BECFAC5182FF4F8002C5F06 /* Rect.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +25,13 @@
 		4BECFAB6182FF2C1002C5F06 /* SPK-RectPack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPK-RectPack-Info.plist"; sourceTree = "<group>"; };
 		4BECFAB8182FF2C1002C5F06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4BECFABA182FF2C1002C5F06 /* SPK_RectPackPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPK_RectPackPlugIn.h; sourceTree = "<group>"; };
-		4BECFABB182FF2C1002C5F06 /* SPK_RectPackPlugIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPK_RectPackPlugIn.m; sourceTree = "<group>"; };
+		4BECFABB182FF2C1002C5F06 /* SPK_RectPackPlugIn.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SPK_RectPackPlugIn.mm; sourceTree = "<group>"; };
 		4BECFABD182FF2C1002C5F06 /* SPK-RectPack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPK-RectPack-Prefix.pch"; sourceTree = "<group>"; };
+		4BECFAC3182FF4F8002C5F06 /* MaxRectsBinPack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaxRectsBinPack.cpp; sourceTree = "<group>"; };
+		4BECFAC4182FF4F8002C5F06 /* MaxRectsBinPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxRectsBinPack.h; sourceTree = "<group>"; };
+		4BECFAC5182FF4F8002C5F06 /* Rect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
+		4BECFAC6182FF4F8002C5F06 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		4BECFAC918303C14002C5F06 /* SPK-RectPack Test Comp.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = "SPK-RectPack Test Comp.qtz"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				4BECFAB4182FF2C1002C5F06 /* SPK-RectPack */,
+				4BECFACA18303C20002C5F06 /* Test Comp */,
 				4BECFAAB182FF2C1002C5F06 /* Frameworks */,
 				4BECFAAA182FF2C1002C5F06 /* Products */,
 			);
@@ -81,8 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				4BECFABA182FF2C1002C5F06 /* SPK_RectPackPlugIn.h */,
-				4BECFABB182FF2C1002C5F06 /* SPK_RectPackPlugIn.m */,
+				4BECFABB182FF2C1002C5F06 /* SPK_RectPackPlugIn.mm */,
 				4BECFAB5182FF2C1002C5F06 /* Supporting Files */,
+				4BECFAC3182FF4F8002C5F06 /* MaxRectsBinPack.cpp */,
+				4BECFAC4182FF4F8002C5F06 /* MaxRectsBinPack.h */,
+				4BECFAC5182FF4F8002C5F06 /* Rect.cpp */,
+				4BECFAC6182FF4F8002C5F06 /* Rect.h */,
 			);
 			path = "SPK-RectPack";
 			sourceTree = "<group>";
@@ -95,6 +107,14 @@
 				4BECFABD182FF2C1002C5F06 /* SPK-RectPack-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BECFACA18303C20002C5F06 /* Test Comp */ = {
+			isa = PBXGroup;
+			children = (
+				4BECFAC918303C14002C5F06 /* SPK-RectPack Test Comp.qtz */,
+			);
+			name = "Test Comp";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +196,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BECFABC182FF2C1002C5F06 /* SPK_RectPackPlugIn.m in Sources */,
+				4BECFAC8182FF4F8002C5F06 /* Rect.cpp in Sources */,
+				4BECFABC182FF2C1002C5F06 /* SPK_RectPackPlugIn.mm in Sources */,
+				4BECFAC7182FF4F8002C5F06 /* MaxRectsBinPack.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

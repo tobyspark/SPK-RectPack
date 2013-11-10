@@ -14,4 +14,12 @@
 //@property double inputFoo;
 //@property (copy) NSString* outputBar;
 
+@property NSUInteger inputWidth;
+@property NSUInteger inputHeight;
+@property (weak) NSDictionary* inputRects;
+@property NSUInteger inputPackHeuristic;
+@property BOOL inputPackCanRotate;
+
+@property (weak) NSDictionary* outputRects;
+
 @end
