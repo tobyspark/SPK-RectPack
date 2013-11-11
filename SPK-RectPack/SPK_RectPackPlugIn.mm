@@ -33,8 +33,9 @@
     if ([key isEqual:@"inputWidth"])            return @{ QCPortAttributeNameKey : @"Pixel Width" };
     if ([key isEqual:@"inputHeight"])           return @{ QCPortAttributeNameKey : @"Pixel Height" };
     if ([key isEqual:@"inputRects"])            return @{ QCPortAttributeNameKey : @"Rects Structure" };
-    if ([key isEqual:@"inputPackHeuristic"])    return @{ QCPortAttributeNameKey : @"Packing Fit" };
-        //return @{ QCPortAttributeNameKey : @"Packing Fit", QCPortAttributeMenuItemsKey : @[@"Best short side fit", @"Best long side fit", @"Best area fit", @"Bottom left rule", @"Contact point rule"]};
+    if ([key isEqual:@"inputPackHeuristic"])    return @{ QCPortAttributeNameKey : @"Packing Fit",
+                                                          QCPortAttributeMaximumValueKey : @4,
+                                                          QCPortAttributeMenuItemsKey : @[@"Best short side fit", @"Best long side fit", @"Best area fit", @"Bottom left rule", @"Contact point rule"]};
     if ([key isEqual:@"inputPackCanRotate"])    return @{ QCPortAttributeNameKey : @"Packing Rotate" };
     if ([key isEqual:@"outputRects"])           return @{ QCPortAttributeNameKey : @"Rects Structure" };
     
