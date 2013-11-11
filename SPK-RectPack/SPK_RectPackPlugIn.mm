@@ -13,7 +13,7 @@
 #import "MaxRectsBinPack.h"
 
 #define	kQCPlugIn_Name				@"SPK-RectPack"
-#define	kQCPlugIn_Description		@"SPK-RectPack description"
+#define	kQCPlugIn_Description		@"Packs a structure of rects (corner x, corner y, width, height) into a containing rectangle. All dimensions as integers, ie. pixels. A QC wrapper for MaxRectsBinPack in https://github.com/juj/RectangleBinPack"
 
 @implementation SPK_RectPackPlugIn
 
