@@ -13,7 +13,7 @@
 #import "MaxRectsBinPack.h"
 
 #define	kQCPlugIn_Name				@"SPK-RectPack"
-#define	kQCPlugIn_Description		@"Packs a structure of rects (corner x, corner y, width, height) into a containing rectangle. All dimensions as integers, ie. pixels. A QC wrapper for MaxRectsBinPack in https://github.com/juj/RectangleBinPack"
+#define	kQCPlugIn_Description		@"Spatially packs rectangles into a container rectangle.\n\n'Rects Structure' is a list of rects whose position is altered by the processing of the patch. It's a structure of structures, with the nested structures required to have bottom left corner 'x', 'y', and 'width', 'height' key-value pairs. The list is keyed, and each individual rect structure can have additional key-value pairs, such as the image to display with the rect metadata.\n\nAll dimensions as integers, ie. pixels.\n\nThis plugin wraps the MaxRectsBinPack algorithm and c++ implementation by Jukka Jylnki, available at https://github.com/juj/RectangleBinPack"
 
 @implementation SPK_RectPackPlugIn
 
@@ -30,8 +30,8 @@
 {
 	// Specify the optional attributes for property based ports (QCPortAttributeNameKey, QCPortAttributeDefaultValueKey...).
 
-    if ([key isEqual:@"inputWidth"])            return @{ QCPortAttributeNameKey : @"Pixel Width" };
-    if ([key isEqual:@"inputHeight"])           return @{ QCPortAttributeNameKey : @"Pixel Height" };
+    if ([key isEqual:@"inputWidth"])            return @{ QCPortAttributeNameKey : @"Container Width" };
+    if ([key isEqual:@"inputHeight"])           return @{ QCPortAttributeNameKey : @"Container Height" };
     if ([key isEqual:@"inputRects"])            return @{ QCPortAttributeNameKey : @"Rects Structure" };
     if ([key isEqual:@"inputPackHeuristic"])    return @{ QCPortAttributeNameKey : @"Packing Fit",
                                                           QCPortAttributeMaximumValueKey : @4,
