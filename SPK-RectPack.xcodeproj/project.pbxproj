@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B25EC2B18343DFA00371EF8 /* SPK-RectPack Advanced Comp.qtz in Resources */ = {isa = PBXBuildFile; fileRef = 4B25EC2A18343DFA00371EF8 /* SPK-RectPack Advanced Comp.qtz */; };
 		4BECFAAD182FF2C1002C5F06 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BECFAAC182FF2C1002C5F06 /* Quartz.framework */; };
 		4BECFAAF182FF2C1002C5F06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BECFAAE182FF2C1002C5F06 /* Cocoa.framework */; };
 		4BECFAB9182FF2C1002C5F06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BECFAB7182FF2C1002C5F06 /* InfoPlist.strings */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B25EC2A18343DFA00371EF8 /* SPK-RectPack Advanced Comp.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = "SPK-RectPack Advanced Comp.qtz"; sourceTree = "<group>"; };
 		4BECFAA9182FF2C1002C5F06 /* SPK-RectPack.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SPK-RectPack.plugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BECFAAC182FF2C1002C5F06 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		4BECFAAE182FF2C1002C5F06 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -112,6 +114,7 @@
 		4BECFACA18303C20002C5F06 /* Test Comp */ = {
 			isa = PBXGroup;
 			children = (
+				4B25EC2A18343DFA00371EF8 /* SPK-RectPack Advanced Comp.qtz */,
 				4BECFAC918303C14002C5F06 /* SPK-RectPack Test Comp.qtz */,
 			);
 			name = "Test Comp";
@@ -169,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B25EC2B18343DFA00371EF8 /* SPK-RectPack Advanced Comp.qtz in Resources */,
 				4BECFAB9182FF2C1002C5F06 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +333,7 @@
 				4BECFAC2182FF2C1002C5F06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
