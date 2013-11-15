@@ -116,13 +116,22 @@
     {
         NSMutableDictionary* rectDict = [[rectStruct objectForKey:key] mutableCopy];
         
+        BOOL zeroSize = [[rectDict objectForKey:@"width"] intValue] == 0 || [[rectDict objectForKey:@"height"] intValue] == 0;
+        if (zeroSize)
+        {
+            rectDict[@"zeroSized"] = @YES;
+            continue;
+        }
+        
         rbp::Rect rectOut = pack.Insert([rectDict[@"width"] intValue], [rectDict[@"height"] intValue], rbp::MaxRectsBinPack::RectBestShortSideFit);
         
         rectDict[@"x"] = @(rectOut.x);
         rectDict[@"y"] = @(rectOut.y);
         
-        BOOL rotated = [[rectDict objectForKey:@"width"] intValue] != rectOut.width;
+        BOOL placed = rectOut.width != 0;
+        rectDict[@"placed"] = placed ? @YES : @NO;
         
+        BOOL rotated = [[rectDict objectForKey:@"width"] intValue] == rectOut.height;
         if (rotated)
         {
             rectDict[@"width"] = @(rectOut.width);
