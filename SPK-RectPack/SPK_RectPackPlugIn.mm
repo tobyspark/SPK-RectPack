@@ -123,7 +123,7 @@
             continue;
         }
         
-        rbp::Rect rectOut = pack.Insert([rectDict[@"width"] intValue], [rectDict[@"height"] intValue], rbp::MaxRectsBinPack::RectBestShortSideFit);
+        rbp::Rect rectOut = pack.Insert([rectDict[@"width"] intValue], [rectDict[@"height"] intValue], fit);
         
         rectDict[@"x"] = @(rectOut.x);
         rectDict[@"y"] = @(rectOut.y);
